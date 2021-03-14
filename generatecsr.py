@@ -1,13 +1,9 @@
 from OpenSSL import crypto
+
 req = crypto.X509Req()
 
 
-def generatecsr(key, csrpath, cn):
-    c = input("Enter your country: ")
-    st = input("Enter your state: ")
-    l = input("Enter your locality: ")
-    o = input("Enter your organization: ")
-
+def generatecsr(key, csrpath, cn, c, st, l, o):
     req.get_subject().CN = cn
     req.get_subject().C = c
     req.get_subject().ST = st
@@ -19,3 +15,4 @@ def generatecsr(key, csrpath, cn):
     csrfile.write(crypto.dump_certificate_request(crypto.FILETYPE_PEM, req))
     csrfile.close()
     print("CSR created!")
+    return c, st, l, o

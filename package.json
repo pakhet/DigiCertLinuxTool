@@ -1,0 +1,37 @@
+{
+    "certificate": {
+        "common_name": "example.com",
+        "csr": "<csr>",
+        "signature_hash": "sha256",
+        "server_platform": {
+            "id": 2
+        }
+    },
+    "comments": "Certificate for app server.",
+    "container": {
+        "id": 334455
+    },
+    "auto_renew": 1,
+    "custom_renewal_message": "Keep this renewed.",
+    "organization": {
+        "id": 123456,
+        "contacts": [
+            {
+                "contact_type": "organization_contact",
+                "user_id": 565611
+            },
+            {
+                "contact_type": "technical_contact",
+                "first_name": "Jill",
+                "last_name": "Valentine",
+                "job_title": "STAR Member",
+                "telephone": "8017019600",
+                "email": "jill.valentine@digicert.com"
+            }
+        ]
+    },
+    "order_validity": {
+      "years": 1
+    },
+    "payment_method": "balance"
+}
